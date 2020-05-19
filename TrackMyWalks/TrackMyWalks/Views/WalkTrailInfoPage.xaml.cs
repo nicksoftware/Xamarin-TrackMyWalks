@@ -27,7 +27,7 @@ namespace TrackMyWalks.Views
             if (_walkData == null)
                 return;
 
-            Navigation.PushAsync(new WalkDistancePage());
+            Navigation.PushAsync(new WalkDistancePage(_walkData));
             Navigation.RemovePage(this);
         }
     }

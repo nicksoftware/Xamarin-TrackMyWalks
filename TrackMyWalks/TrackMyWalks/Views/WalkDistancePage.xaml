@@ -2,14 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              mc:Ignorable="d"
              x:Class="TrackMyWalks.Views.WalkDistancePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <ScrollView Padding="10">
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <maps:Map WidthRequest="320" HeightRequest="200" x:Name="MyCustomTrailMap" 
+                               IsShowingUser="true" MapType="Street" />
+            <Button x:Name="EndThisTrail" Text="End this Trail" TextColor="White" 
+                             BackgroundColor="#008080" Clicked="EndThisTrail_Clicked"/>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

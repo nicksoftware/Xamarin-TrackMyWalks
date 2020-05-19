@@ -16,6 +16,7 @@ namespace TrackMyWalks.Views
         public WalksMainPage()
         {
             InitializeComponent();
+            InitialiseWalks();
         }
         public void InitialiseWalks()
         {
